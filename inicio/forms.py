@@ -8,3 +8,7 @@ class CrearMangaFormulario(forms.Form):
 
 class BusquedaMangaFormulario(forms.Form):
     nombre = forms.CharField(max_length=30, required=False)
+
+class CrearMaquillajeFormulario(forms.Form):
+    nombre = forms.CharField(max_length=30)
+    marca = forms.CharField(max_length=30)

@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 
 {% block title_head %}
-<title>Mangas</title>
+<title>Productos</title>
 {% endblock title_head %}
 
 {% block h1_header %}
-Mangas
+Productos
 {% endblock h1_header %}
 
 {% block main %}
+    <h3>Buscar Mangas</h3>
     <form method="GET" action="">
         {{ formulario }}
         <input type="submit" value="Buscar">
     </form>
+
     {% if listado_de_mangas %}
+        <h2>Listado de mangas</h2>
         <ul>
             {% for manga in listado_de_mangas %}
                 <li>{{ manga }}</li>
@@ -22,4 +25,16 @@ Mangas
     {% else %}
         <p>No se encontraron mangas.</p>
     {% endif %}
+
+    {% if listado_de_maquillaje %}
+        <h2>Listado de maquillaje</h2>
+        <ul>
+            {% for maquillaje in listado_de_maquillaje %}
+                <li>{{ maquillaje }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontro maquillaje.</p>
+    {% endif %}
+    
 {% endblock main %}

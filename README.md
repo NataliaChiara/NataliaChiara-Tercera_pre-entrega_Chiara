@@ -40,3 +40,12 @@ Para agregar un super-usuario
 
     python manage.py createsuperuser
     (usuario: natalia, contraseña: 12345678)
+
+Despues de hacer cambios en los modelos, agregar en admin.py
+
+    1 - from django.contrib import admin
+        from inicio.models import *MODELO*
+
+        admin.site.register(*MODELO*) (uno a la vez)
+
+    2- eliminar la db y volver a correr python manage.py migrate

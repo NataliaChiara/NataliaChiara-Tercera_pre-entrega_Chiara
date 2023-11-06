@@ -1,18 +1,26 @@
 {% extends "base.html" %}
 
 {% block title_head %}
-<title>Crear manga</title>
+<title>Crear producto</title>
 {% endblock title_head %}
 
 {% block h1_header %}
-Crear manga
+Crear producto
 {% endblock h1_header %}
 
 {% block main %}
  
+<h3>Crear Mangas</h3>
 <form action="" method='POST'>
     {% csrf_token %}
-    {{formulario}}
+    {{formulario_mangas}}
+    <input type="submit" value="Crear">
+</form>
+<br/>
+<h3>Crear Maquillaje</h3>
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{formulario_maquillaje}}
     <input type="submit" value="Crear">
 </form>
 

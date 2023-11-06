@@ -8,3 +8,10 @@ class Manga(models.Model):
 
     def __str__(self):
         return f'{self.nombre} - {self.autor}'
+
+class Maquillaje(models.Model):
+    nombre = models.CharField(max_length=30)
+    marca = models.CharField(max_length=30)
+
+    def __str__(self):
+        return f'{self.nombre} - {self.marca}'
