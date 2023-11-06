@@ -17,9 +17,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nombre', models.CharField(max_length=30)),
                 ('autor', models.CharField(max_length=30)),
-                ('descripcion', models.TextField()),
-                ('anio', models.IntegerField()),
-                ('tipo', 'manga')
+                ('descripcion', models.CharField(max_length=100)),
+                ('anio', models.IntegerField())
             ],
         ),
     ]

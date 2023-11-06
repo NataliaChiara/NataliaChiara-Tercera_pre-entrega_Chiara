@@ -22,7 +22,7 @@ def crear_manga(request):
             autor = info_limpia.get('autor')
             descripcion = info_limpia.get('descripcion')
             anio = info_limpia.get('anio')
-            manga = Manga(nombre=nombre.lower(), autor=autor, descripcion=descripcion, anio=anio)
+            manga = Manga(nombre=nombre, autor=autor, descripcion=descripcion, anio=anio)
             manga.save()
             return redirect('mangas')
         else:

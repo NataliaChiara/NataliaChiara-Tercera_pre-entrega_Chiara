@@ -5,7 +5,6 @@ class Manga(models.Model):
     autor = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=100)
     anio = models.IntegerField()
-    tipo = 'manga'
 
     def __str__(self):
-        return f'{self.nombre} - {self.autor} - {self.tipo}'
+        return f'{self.nombre} - {self.autor}'

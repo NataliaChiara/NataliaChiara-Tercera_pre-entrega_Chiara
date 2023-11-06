@@ -35,3 +35,8 @@ Si se agrega alguna dependencia, actualizar el requirements.txt con el comando
 Si se va a realizar algun cambio abrir una rama
 
     feature/*nombre del cambio*
+
+Para agregar un super-usuario
+
+    python manage.py createsuperuser
+    (usuario: natalia, contraseña: 12345678)
