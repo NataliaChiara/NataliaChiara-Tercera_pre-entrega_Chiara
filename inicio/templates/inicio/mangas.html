@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Mangas</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Mangas
+{% endblock h1_header %}
+
+{% block main %}
+    <form method="GET" action="">
+        {{ formulario }}
+        <input type="submit" value="Buscar">
+    </form>
+    {% if listado_de_mangas %}
+        <ul>
+            {% for manga in listado_de_mangas %}
+                <li>{{ manga.nombre }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron mangas.</p>
+    {% endif %}
+{% endblock main %}

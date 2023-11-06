@@ -1,10 +1,11 @@
 from django.db import models
 
-class Paleta(models.Model):
-    marca = models.CharField(max_length=30)
-    descripcion = models.TextField()
+class Manga(models.Model):
+    nombre = models.CharField(max_length=30)
+    autor = models.CharField(max_length=30)
+    descripcion = models.CharField(max_length=100)
     anio = models.IntegerField()
+    tipo = 'manga'
 
     def __str__(self):
-        return f'{self.id} - {self.marca} - {self.anio}'
-
+        return f'{self.nombre} - {self.autor} - {self.tipo}'

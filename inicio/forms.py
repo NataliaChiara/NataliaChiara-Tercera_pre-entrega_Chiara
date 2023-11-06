@@ -1,9 +1,10 @@
 from django import forms
 
-class CrearPaletaFormulario(forms.Form):
-    marca = forms.CharField(max_length=30)
-    descripcion = forms.CharField(max_length=250)
+class CrearMangaFormulario(forms.Form):
+    nombre = forms.CharField(max_length=30)
+    autor = forms.CharField(max_length=30)
+    descripcion = forms.CharField(max_length=100)
     anio = forms.IntegerField()
 
-class BusquedaPaletaFormulario(forms.Form):
-    marca = forms.CharField(max_length=30, required=False)
+class BusquedaMangaFormulario(forms.Form):
+    nombre = forms.CharField(max_length=30, required=False)

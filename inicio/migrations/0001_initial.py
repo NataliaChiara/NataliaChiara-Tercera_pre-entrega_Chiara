@@ -12,12 +12,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Paleta',
+            name='Manga',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('marca', models.CharField(max_length=30)),
+                ('nombre', models.CharField(max_length=30)),
+                ('autor', models.CharField(max_length=30)),
                 ('descripcion', models.TextField()),
                 ('anio', models.IntegerField()),
+                ('tipo', 'manga')
             ],
         ),
     ]
