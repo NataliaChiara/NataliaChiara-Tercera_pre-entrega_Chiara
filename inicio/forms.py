@@ -12,3 +12,7 @@ class BusquedaMangaFormulario(forms.Form):
 class CrearMaquillajeFormulario(forms.Form):
     nombre = forms.CharField(max_length=30)
     marca = forms.CharField(max_length=30)
+
+class CrearComidaFormulario(forms.Form):
+    nombre = forms.CharField(max_length=30)
+    vencimiento = forms.IntegerField()

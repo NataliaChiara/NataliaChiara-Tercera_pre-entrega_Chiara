@@ -11,7 +11,7 @@ Productos
 {% block main %}
     <h3>Buscar Mangas</h3>
     <form method="GET" action="">
-        {{ formulario }}
+        {{ busqueda }}
         <input type="submit" value="Buscar">
     </form>
 
@@ -36,5 +36,16 @@ Productos
     {% else %}
         <p>No se encontro maquillaje.</p>
     {% endif %}
+
+    {% if listado_de_comida %}
+    <h2>Listado de maquillaje</h2>
+    <ul>
+        {% for comida in listado_de_comida %}
+            <li>{{ comida }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No se encontro comida.</p>
+{% endif %}
     
 {% endblock main %}

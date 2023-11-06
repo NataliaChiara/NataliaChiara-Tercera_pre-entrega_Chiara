@@ -15,3 +15,10 @@ class Maquillaje(models.Model):
 
     def __str__(self):
         return f'{self.nombre} - {self.marca}'
+    
+class Comida(models.Model):
+    nombre = models.CharField(max_length=30)
+    vencimiento = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.nombre} - {self.vencimiento}'

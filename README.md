@@ -48,4 +48,6 @@ Despues de hacer cambios en los modelos, agregar en admin.py
 
         admin.site.register(*MODELO*) (uno a la vez)
 
-    2- eliminar la db y volver a correr python manage.py migrate
+    2- Correr comandos
+        python manage.py makemigrations
+        python manage.py migrate

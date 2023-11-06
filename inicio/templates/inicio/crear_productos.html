@@ -23,5 +23,12 @@ Crear producto
     {{formulario_maquillaje}}
     <input type="submit" value="Crear">
 </form>
+<br/>
+<h3>Crear comida</h3>
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{formulario_comida}}
+    <input type="submit" value="Crear">
+</form>
 
 {% endblock main %}
